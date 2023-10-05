@@ -1,7 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "make": "^0.8.1",
-    "raw-socket": "^1.7.0"
-  }
-}
