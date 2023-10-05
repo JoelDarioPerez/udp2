@@ -1,8 +1,7 @@
-const dgram = require("dgram");
-const socket = dgram.createSocket("udp4");
-
-socket.on("message", (msg, rinfo) => {
-  console.log(`server got: ${msg} from ${rinfo.address}: ${rinfo.port}`);
+var dgram = require("dgram");
+var server = dgram.createSocket("udp4");
+server.on("message", function (msg, rinfo) {
+  console.log(`mensaje recivido + ${msg}`);
 });
 
-socket.bind(8081);
+server.bind(8080);
