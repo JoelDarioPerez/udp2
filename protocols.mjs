@@ -84,4 +84,3 @@ export function AL900(data) {
     console.error("AL 900", e);
   }
 }
-AL900(data);
