@@ -4,7 +4,7 @@ export function AL900(data) {
   try {
     const dataAL = data.toString("");
     console.log("data autoleader" + dataAL);
-    const patente = "FXRX57";
+    const patente = "DRKS19";
 
     const latitud = (dataAL) => {
       const Latgrados = dataAL.substring(31, 33);
