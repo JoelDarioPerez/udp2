@@ -1,5 +1,5 @@
-const net = require("net");
-const dgram = require("dgram");
+import net from "net";
+import dgram from "dgram";
 import { handler } from "./handler.mjs";
 import { AL900 } from "./protocols.mjs";
 
