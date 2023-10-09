@@ -67,7 +67,7 @@ const enviarDatosUDP = (data) => {
   );
 };
 
-const PORT = 12345; // Cambia el puerto según tus necesidades
+const PORT = 3200; // Cambia el puerto según tus necesidades
 server.listen(PORT, () => {
   console.log(`Servidor TCP/IP escuchando en el puerto ${PORT}`);
 });
