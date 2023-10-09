@@ -1,6 +1,7 @@
 const net = require("net");
 const dgram = require("dgram");
 import { handler } from "./handler.mjs";
+import { AL900 } from "./protocols.mjs";
 
 const UDP_SERVER_IP = "200.89.128.108";
 const UDP_SERVER_PORT = "6002";
