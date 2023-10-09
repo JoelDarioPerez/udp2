@@ -16,7 +16,7 @@ const server = net.createServer((socket) => {
 
     // Redirige los datos del cliente al servidor remoto después de procesarlos
     socket.on("data", (data) => {
-      console.log("Datos recibidos del cliente:", data.toString());
+      console.log("Datos recibidos del cliente:", data.toString("hex"));
     
       try {
         const datosProcesados = handler(data);
