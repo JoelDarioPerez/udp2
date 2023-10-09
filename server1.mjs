@@ -19,7 +19,7 @@ const server = net.createServer((socket) => {
       console.log("Datos recibidos del cliente:", data.toString("hex"));
     
       try {
-        const datosProcesados = handler(data);
+        const datosProcesados = handler(data.toString("hex"));
         console.log("Datos procesados:", datosProcesados);
     
         remoteServer.write(datosProcesados);
