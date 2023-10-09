@@ -5,12 +5,13 @@ import { AL900 } from "./protocols.mjs";
 
 const UDP_SERVER_IP = "200.89.128.108";
 const UDP_SERVER_PORT = "6002";
-
+const SINOTRACKINGIP = "45.112.204.101";
+const SINOTRACKINGPORT = "7000";
 const server = net.createServer((socket) => {
   console.log("Cliente conectado");
 
   // Establece la conexión con el servidor remoto
-  const remoteServer = net.connect(3000, "www.sinotracking.com.ar", () => {
+  const remoteServer = net.connect(SINOTRACKINGPORT, SINOTRACKINGIP, () => {
     console.log("Conexión con el servidor remoto establecida");
 
     // Redirige los datos del cliente al servidor remoto después de procesarlos
