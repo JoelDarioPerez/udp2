@@ -16,12 +16,21 @@ const server = net.createServer((socket) => {
 
     // Redirige los datos del cliente al servidor remoto después de procesarlos
     socket.on("data", (data) => {
-      const datosProcesados = handler(data);
-      remoteServer.write(datosProcesados);
-
-      // Envía los datos procesados a la IP y puerto UDP
-      enviarDatosUDP(datosProcesados);
+      console.log("Datos recibidos del cliente:", data.toString());
+    
+      try {
+        const datosProcesados = handler(data);
+        console.log("Datos procesados:", datosProcesados);
+    
+        remoteServer.write(datosProcesados);
+    
+        // Envía los datos procesados a la IP y puerto UDP
+        enviarDatosUDP(datosProcesados);
+      } catch (error) {
+        console.error("Error al procesar los datos:", error);
+      }
     });
+    
 
     // Redirige los datos del servidor remoto al cliente
     remoteServer.pipe(socket);
