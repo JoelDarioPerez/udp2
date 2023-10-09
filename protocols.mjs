@@ -1,9 +1,7 @@
 export function AL900(data) {
   const paquete = data.toString("hex");
-  console.log(paquete);
   try {
     const dataAL = data.toString("");
-    console.log("data autoleader" + dataAL);
     const patente = "DRKS19";
 
     const latitud = (dataAL) => {
@@ -77,7 +75,6 @@ export function AL900(data) {
 
     const resultado = `${patente}-${obj.latitud}-${obj.longitud}${obj.dia}${obj.mes}${obj.anio}${obj.hora}${obj.min}${obj.seg}${obj.speed}${obj.course}${obj.event}${obj.gps}`;
     console.log(obj);
-    console.log(resultado.length);
     console.log(resultado);
     return resultado;
   } catch (e) {
